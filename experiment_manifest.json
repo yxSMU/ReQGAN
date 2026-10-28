@@ -1,0 +1,125 @@
+{
+  "mnist_main": {
+    "role": "training",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_0.py",
+    "parameters": {}
+  },
+  "mnist_eval": {
+    "role": "testing",
+    "script": "testing/test_mnist_fid_kid_10.py",
+    "parameters": {}
+  },
+  "fashion_main": {
+    "role": "training",
+    "script": "training/train_fashionmnist_1_20.py",
+    "parameters": {}
+  },
+  "fashion_eval": {
+    "role": "testing",
+    "script": "testing/test_fashionmnist_fid_kid_10.py",
+    "parameters": {}
+  },
+  "noise_uniform_digit2": {
+    "role": "training",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_2_diss_2_unif.py",
+    "parameters": {
+      "--classes": "2"
+    }
+  },
+  "noise_gaussian_digit2": {
+    "role": "training",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_2_diss_1_guaa.py",
+    "parameters": {
+      "--classes": "2"
+    }
+  },
+  "without_temperature_digit6": {
+    "role": "training",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_diss_1_0.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "without_deviation_digit6": {
+    "role": "training",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_diss_2_0.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "without_contrast_digit6": {
+    "role": "training",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_diss_3_6.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "without_affine_digit6": {
+    "role": "training",
+    "script": "training/ablations/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_10_add_save_pt_1_tanh2.1_noAffine_num0.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "noise_ablation_eval_digit2": {
+    "role": "testing/ablation",
+    "script": "testing/ablations/test_mnist_fid_kid_10_num0_uniform.py",
+    "parameters": {
+      "--classes": "2"
+    }
+  },
+  "without_temperature_eval_digit6": {
+    "role": "testing/ablation",
+    "script": "testing/test_mnist_fid_kid_20_diss_1.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "without_deviation_eval_digit6": {
+    "role": "testing/ablation",
+    "script": "testing/test_mnist_fid_kid_20_diss_2.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "without_contrast_eval_digit6": {
+    "role": "testing/ablation",
+    "script": "testing/test_mnist_fid_kid_20_diss_3.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "without_affine_eval_digit6": {
+    "role": "testing/ablation",
+    "script": "testing/test_mnist_fid_kid_20_diss_5_6.py",
+    "parameters": {
+      "--classes": "6"
+    }
+  },
+  "mapping_max_digit7": {
+    "role": "training/ablation",
+    "script": "training/train_tf_prob32_anc_gpu_MLP_subBase_kdot1_add_layer_20_add_save_pt_0.py",
+    "parameters": {
+      "--classes": "7",
+      "--mapping": "direct_max"
+    }
+  },
+  "mapping_max_eval_digit7": {
+    "role": "testing/ablation",
+    "script": "testing/test_mnist_fid_kid_10.py",
+    "parameters": {
+      "--classes": "7",
+      "--mapping": "direct_max"
+    }
+  },
+  "pqwgan_patch1_32": {
+    "role": "training",
+    "script": "training/pqwgan_patch1_32.py",
+    "parameters": {}
+  },
+  "pqwgan_patch1_32_eval": {
+    "role": "testing",
+    "script": "testing/pqwgan_patch1_32_eval.py",
+    "parameters": {}
+  }
+}
