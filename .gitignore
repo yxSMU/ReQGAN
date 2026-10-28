@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# System and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Downloaded data and generated artifacts
+datasets/
+data/
+outputs/
+results/
+checkpoints/
+logs/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.weights.h5
+*.npy
+*.npz
+*.log
+
+# Local environment
+.env
+.env.*
